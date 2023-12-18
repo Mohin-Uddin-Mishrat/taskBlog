@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     
+    <title>KhAcci VAI</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    {% block link %}
+    {% endblock %}
+</head>
+
+<body>
+    <nav class="flex  ps-10 bg-[#d9f99d] py-1">
+        <ul class="flex items-center gap-10">
+
+            <li class="text-3xl font-bold text-yellow-600">Daily task</li>
+            <li class="hover:underline underline-offset-8 font-bold text-red-500"><a href="{% url 'show' %}">Show task</a></li>
+            <li class="hover:underline underline-offset-8 font-bold text-red-500"><a href="{% url 'add' %}">Add Task</a></li>
+            <li class="hover:underline  underline-offset-8 font-bold text-red-500"><a href="{% url 'cat' %}">Add Category</a></li>
+        </ul>
+    </nav>
+    <section>
+        {% block content %}
+        {% endblock %}
+    </section>
+</body>
+</html>

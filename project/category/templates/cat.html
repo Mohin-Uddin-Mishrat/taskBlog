@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+
+{% load crispy_forms_tags %}
+{% load tailwind_filters %}
+
+{% block content %}
+
+<form class="md:w-1/4 h-7 py-10 mx-auto " method="post">
+    {% csrf_token %}
+    {{ form|crispy }}
+    <input type="submit" class="bg-red-700   px-10 py-1 rounded-lg">
+</form>
+{% endblock %} 
